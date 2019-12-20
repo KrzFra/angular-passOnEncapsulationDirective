@@ -18,7 +18,7 @@ export class PassOnEncapsulationDirective implements AfterContentChecked {
         }
     }
 
-    extractNgContentAttribute(nativeElement: HTMLElement): string | null {
+    private extractNgContentAttribute(nativeElement: HTMLElement): string | null {
         const attributes = nativeElement.attributes;
 
         for (let i = 0; i < attributes.length; i++) {
@@ -31,7 +31,7 @@ export class PassOnEncapsulationDirective implements AfterContentChecked {
         return null;
     }
 
-    addNgContentAttributeTooAllChildren(nativeElement: HTMLElement, ngContentAttribute: string) {
+    private addNgContentAttributeTooAllChildren(nativeElement: HTMLElement, ngContentAttribute: string) {
         for (let i = 0; i < nativeElement.children.length; i++) {
             const child = nativeElement.children[i] as HTMLElement;
             child.setAttribute(ngContentAttribute, '');

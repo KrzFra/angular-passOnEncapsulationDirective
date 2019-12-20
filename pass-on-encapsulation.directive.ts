@@ -31,7 +31,7 @@ export class PassOnEncapsulationDirective implements AfterContentChecked {
         return null;
     }
 
-    private addNgContentAttributeTooAllChildren(nativeElement: HTMLElement, ngContentAttribute: string) {
+    private addNgContentAttributeTooAllChildren(nativeElement: HTMLElement, ngContentAttribute: string): void {
         for (let i = 0; i < nativeElement.children.length; i++) {
             const child = nativeElement.children[i] as HTMLElement;
             child.setAttribute(ngContentAttribute, '');

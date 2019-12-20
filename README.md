@@ -1,7 +1,7 @@
 # passOnEncapsulationDirective
 Directive for Angular to pass on a parents encapsulation attribute to its children.
 
-When `ViewEncapsulation.Emulated` is enabled in Angular (default), it adds an attribute to your HTML elements and CSS classes to keep your css rules inside the component. This is great if you only use your own components, since you can edit their respective CSS directly. However, when you use other packages, f.e Angular Material, you don't have access to the Material Component's children.
+When `ViewEncapsulation.Emulated` is enabled in Angular (default), it adds an attribute to your HTML elements and CSS classes to keep your css rules inside the component. This is great if you only use your own components, since you can edit their respective styles directly. However, when you use other packages, f.e Angular Material, you don't have access to the component's children.
 
 ## Example before:
 
@@ -52,9 +52,9 @@ When `ViewEncapsulation.Emulated` is enabled in Angular (default), it adds an at
     border: 1px solid red;
 }
 ```
-Angular uses randomly generated attributes, in this case `_ngcontent-rwb-c0`, to bind the CSS rules to the components HTML Elements. But Angular only adds the attribute to the 'root' elements which are positioned directly in my template. In this case my css rule for `.mat-form-field-infix` will not be connected to the element and I will need to put it in the global `style.css`. This is especially tedious, when I want to display `.mat-form-field-infix` differently in several components and defeats the whole purpose of encapsulation.
+Angular uses randomly generated attributes, in this case `_ngcontent-rwb-c0`, to bind the CSS rules to the components HTML elements. But Angular only adds the attribute to the 'root' elements which are positioned directly in my template. In this case my css rule for `.mat-form-field-infix` will not be applied to the element. I will need to put it in the global `style.css` where no encapsulation tag is added to the CSS class. But this becomes tedious quickly, expecially when I want to display `.mat-form-field-infix` differently in several components; and it defeats the whole purpose of encapsulation.
 
-## Example after
+## Example after:
 
 ### my-component.html
 ```html

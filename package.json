@@ -1,0 +1,24 @@
+{
+  "name": "angular-pass-on-encap",
+  "version": "1.0.0",
+  "description": "Angular directive which passes a parents's virtual encapsulation parameter on to its children",
+  "main": "pass-on-encapsulation.directive.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KrzFra/passOnEncapsulationDirective.git"
+  },
+  "keywords": [
+    "angular",
+    "virtual",
+    "encapsulation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KrzFra/passOnEncapsulationDirective/issues"
+  },
+  "homepage": "https://github.com/KrzFra/passOnEncapsulationDirective#readme"
+}
